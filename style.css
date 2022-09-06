@@ -58,6 +58,7 @@ body {
     justify-content: space-between;
     width: 30px;
     height: 21px;
+    transition: transform ease-out 250ms;
 }
 
 .toggle-button .bar {

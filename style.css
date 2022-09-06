@@ -13,18 +13,25 @@ body {
     font-weight: 300;
 }
 
+
 .logo {
     height: var(--logo-height);
     width: var(--logo-width);
 }
 
 .navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     background-color: #053A6F;
 }
 
+.navbar-links {
+    margin-left: 1rem;
+}
 
 .navbar-links ul {
     margin: 0;
@@ -68,8 +75,14 @@ body {
     border-radius: 10px;
 }
 
+.date {
+    position: relative;
+    top: var(--logo-height);
+}
+
 @media (max-width: 650px) {
     .navbar {
+        position: relative;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -99,7 +112,16 @@ body {
         font-size: 1rem;
     }
 
-    .navbar-links.active {
-       
+    .date {
+        top: 0;
     }
 }
+
+@keyframes animate {
+    from {
+      filter: hue-rotate(0deg);
+    }
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }

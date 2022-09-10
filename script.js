@@ -1,5 +1,4 @@
-require("dotenv").config();
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const navBar = document.getElementsByClassName("navbar")[0];
 const toggleButton = document.getElementsByClassName("toggle-button")[0];

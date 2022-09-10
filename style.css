@@ -56,10 +56,11 @@ body {
     text-transform: uppercase;
     display: block;
     background-color: #053A6F;
+    transition: color ease-out 350ms;
 }
 
 .navbar-links li:hover > * {
-    color: rgb(227, 96, 96);
+    color: rgba(255, 0, 0, 0.9);
 }
 
 .toggle-button {

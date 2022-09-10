@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from "https://john202021.github.io/node_modules/mongoose/index.js";
 
 const navBar = document.getElementsByClassName("navbar")[0];
 const toggleButton = document.getElementsByClassName("toggle-button")[0];

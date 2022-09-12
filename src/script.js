@@ -21,14 +21,14 @@ toggleButton.addEventListener("click", async () => {
 
             if (!navbarLinks.classList.contains("active")) {
                 navbarLinks.style.height = 0;
-                navBar.style.padding = "10px 0";
+                navBar.style.padding = "15px 0";
                 break;
             }
             await wait(msWait);
             msWait += 0.25;
         } 
     } else {
-        navBar.style.padding = "10px 0";
+        navBar.style.padding = "15px 0";
         toggleButton.style.transform = "rotate(0deg)"
         navbarLinks.style.height = 0;
     }
@@ -40,7 +40,7 @@ mediaQuery.addEventListener("change", handleMediaChange);
 function handleMediaChange(media) {
     if (media.matches) {
         navbarLinks.style.height = "unset";
-        navBar.style.padding = "10px 0";
+        navBar.style.padding = "15px 0";
 
         mediaQuery2.addEventListener("change", revertMediaChange);
     }

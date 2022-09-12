@@ -5,9 +5,9 @@
 }
 
 :root {
-    --navbar-height: 60px;
-    --logo-width: 60px;
-    --nav-padding: 10px;
+    --navbar-height: 50px;
+    --logo-width: 50px;
+    --nav-padding: 5px;
 }
 
 body {
@@ -52,10 +52,11 @@ body {
 .navbar-links li a {
     text-decoration: none;
     padding: 1rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-transform: uppercase;
     display: block;
     background-color: #053A6F;
+    padding-right: 2rem;
     transition: color ease-out 350ms;
 }
 

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <link rel="stylesheet" href="style.css">
-      <script src="./src/script.js" defer></script>
-      <title>Greek Warriors Bot</title>
-    </head>
-    <body>
-      <nav class="navbar">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./src/commands_page.js" defer></script>
+    <title>Greek Warriors Bot</title>
+</head>
+<body>
+    <nav class="navbar">
 
         <img
           src="https://cdn.discordapp.com/avatars/875303676728725555/c4da904a3cc81b96d4ebbf4692a1ef70.png?size=4096"
@@ -26,7 +26,7 @@
 
         <div class="navbar-links">
           <ul>
-            <li class="nav-link"><a href="#">Home</a></li>
+            <li class="nav-link"><a href="./index.html">Home</a></li>
             <li class="nav-link"><a href="./commands.html">Commands</a></li>
             <li class="nav-link"><a href="#">Help</a></li>
             <li class="nav-link"><a href="https://discord.gg/QrjxXxvVfq" target="_blank">Join our discord</a></li>
@@ -35,13 +35,8 @@
         </div>
       </nav>
 
-      <main>
-        
-      </main>
-
-      <footer class="date">
-        Updated...
-      </footer>
-
-    </body>
+    <main>
+        <div class="commands-list" id="commands"></div>
+    </main>
+</body>
 </html>

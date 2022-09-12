@@ -1,5 +1,3 @@
-import mongoose from "https://john202021.github.io/node_modules/mongoose/index.js";
-
 const navBar = document.getElementsByClassName("navbar")[0];
 const toggleButton = document.getElementsByClassName("toggle-button")[0];
 const navbarLinks = document.getElementsByClassName("navbar-links")[0];
@@ -57,13 +55,4 @@ function revertMediaChange(media) {
     }
 }
 
-mongoose.connect(process.env.MONGODB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
-}).then(() => {
-    console.log('Connected to the database.');
-}).catch((err) => {
-    console.log(err);
-});
 

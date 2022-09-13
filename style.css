@@ -99,7 +99,66 @@ main {
     font-size: 2rem;
 }
 
+#commands {
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
 
+.table-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    box-shadow: 4px 8px 22px blue,
+                4px -8px 22px blue;
+}
+
+th {
+    background-color: rgb(102, 102, 102);
+    font-weight: 900;
+}
+
+th, td {
+    border: 3px solid rgb(140, 138, 138);
+    padding: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 25vw;
+}
+
+td {
+    color: rgba(255, 255, 255, 0.8);
+    transition: background-color ease-out 250ms;
+}
+
+td:hover {
+    background: rgba(45, 47, 50, 0.8);
+}
+
+@media only screen and (max-width: 1150px) {
+    th, td {
+        border: 2px solid rgb(140, 138, 138);
+        padding: 15px;
+        width: 35vw;
+    }
+
+}
+
+@media only screen and (max-width: 1004px) {
+    th, td {
+        font-size: 1.25rem;
+        padding: 15px;
+        width: 40vw;
+    }
+
+    td {
+        color: rgba(255, 255, 255, 0.85);
+    }
+}
 
 @media only screen and (max-width: 715px) {
     .navbar {
@@ -141,6 +200,7 @@ main {
         position: relative;
         top: var(--navbar-height);
     }
+
 }
 
 @keyframes animate {

@@ -33,13 +33,13 @@ const commands_list = [
     name: "purge",
     description: "Delete multiple messages at once",
     category: "ADMIN",
-    usage: "purge [amount] **or** [amount] (subcommand) (subcommand argument)",
+    usage: "purge [amount] || [amount] (subcommand) (subcommand argument)",
   },
   {
     name: "role",
     description: "A command that gives/removes a role to someone.",
     category: "ADMIN",
-    usage: "role [user] [role] **or** [subcommand] [user] [role]",
+    usage: "role [user] [role] || [subcommand] [user] [role]",
   },
   {
     name: "setprefix",

@@ -7,7 +7,7 @@ const mediaQuery2 = window.matchMedia("(max-width: 715px)");
 const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
 const max_height = navLinksLength * 2.25 - 0.25;
-        
+
 toggleButton.addEventListener("click", async () => {
     navbarLinks.classList.toggle("active");
     navBar.style.padding = 0;
@@ -16,7 +16,7 @@ toggleButton.addEventListener("click", async () => {
         toggleButton.style.transform = "rotate(90deg)";
         let msWait = 0;
         for (let height = 0; height <= max_height; height += 0.25) {
-            
+
             navbarLinks.style.height = height + "rem"
 
             if (!navbarLinks.classList.contains("active")) {
@@ -26,7 +26,7 @@ toggleButton.addEventListener("click", async () => {
             }
             await wait(msWait);
             msWait += 0.25;
-        } 
+        }
         navbarLinks.style.height = "unset";
     } else {
         navBar.style.padding = "5px 0";

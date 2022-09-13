@@ -50,6 +50,8 @@ body {
 }
 
 .navbar-links li a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
     text-decoration: none;
     padding: 1rem;
     font-size: 1rem;
@@ -94,14 +96,21 @@ main {
     top: calc(var(--navbar-height) + 2 * var(--nav-padding));
 }
 
-.current-page {
-    font-weight: 1000;
-    font-size: 2rem;
+#current-page {
+    font-weight: 900;
 }
 
 #commands {
     margin-bottom: 2%;
     margin-top: 2%;
+}
+
+.name-row {
+    color: #00d1b2;
+}
+
+.usage-row {
+    color: #9ba0ae;
 }
 
 .table-container {
@@ -113,9 +122,10 @@ main {
 
 table {
     border-collapse: collapse;
-    box-shadow: 4px 8px 22px blue,
-                4px -8px 22px blue;
+    box-shadow: 4px 8px 22px rgba(0, 0, 255, 0.9),
+                4px -8px 22px rgba(0, 0, 255, 0.7);
 }
+
 
 th {
     background-color: rgb(102, 102, 102);
@@ -131,7 +141,8 @@ th, td {
 }
 
 td {
-    color: rgba(255, 255, 255, 0.8);
+    background-color: #181a20;
+    color: rgba(255, 255, 255, 0.85);
     transition: background-color ease-out 250ms;
 }
 
@@ -139,24 +150,29 @@ td:hover {
     background: rgba(45, 47, 50, 0.8);
 }
 
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1200px) {
     th, td {
         border: 2px solid rgb(140, 138, 138);
         padding: 15px;
-        width: 35vw;
+        width: 28vw;
     }
 
 }
 
-@media only screen and (max-width: 1004px) {
+@media only screen and (max-width: 1100px) {
     th, td {
-        font-size: 1.25rem;
-        padding: 15px;
-        width: 40vw;
+        width: 30vw;
     }
 
     td {
-        color: rgba(255, 255, 255, 0.85);
+        color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    th, td {
+        font-size: 1.25rem;
+        padding: 15px;
     }
 }
 
@@ -201,6 +217,39 @@ td:hover {
         top: var(--navbar-height);
     }
 
+    th {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    td {
+        width: 80vw;
+        text-align: left;
+    }
+
+    .name-row {
+        border: none;
+        text-align: center;
+    }
+
+    .descr-row {
+        border: none;
+    }
+
+    .usage-row {
+        border-top: none;
+    }
+
+    table {
+        border: 2px solid rgb(140, 138, 138);
+    }
+
+    #commands {
+        margin-bottom: 4%;
+        margin-top: 4%;
+    }
 }
 
 @keyframes animate {

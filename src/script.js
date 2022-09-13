@@ -27,6 +27,7 @@ toggleButton.addEventListener("click", async () => {
             await wait(msWait);
             msWait += 0.25;
         } 
+        navbarLinks.style.height = "unset";
     } else {
         navBar.style.padding = "5px 0";
         toggleButton.style.transform = "rotate(0deg)"

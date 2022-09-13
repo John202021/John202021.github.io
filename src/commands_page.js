@@ -1,10 +1,11 @@
 import { commands_list } from "./commands_list.js";
 
-const mediaQuery = window.matchMedia("(max-width: 600px)");
+const mediaQuery = window.matchMedia("(max-width: 715px)");
 const commands_dom = document.getElementById("commands").tBodies[0];
 const formatted_commands_names = commands_list.map(c => c.name);
 const formatted_commands_descriptions = commands_list.map(c => c.description);
 const formatted_commands_usages = commands_list.map(c => "=" + c.usage);
+console.log(commands_dom);
 
 let table_row1_array = [];
 let table_row2_array = [];
@@ -32,6 +33,11 @@ formatted_commands_usages.forEach((usage) => {
 });
 
 function formatTableData(bool = false) {
+    let rowCount = commands_dom.rows.length;
+    for (var i = 1; i < rowCount; i++) {
+        commands_dom.deleteRow(1);
+    }
+
     for (let index = 0; index < commands_list.length; index++) {
         const name_data = table_row1_array[index];
         const descr_data = table_row2_array[index];
@@ -57,11 +63,12 @@ function formatTableData(bool = false) {
             commands_dom.appendChild(tableRow);
         }
     }
+    commands_dom.style.border = "2px solid rgb(140, 138, 138)"
     mediaQuery.addEventListener("change", toggleTableRows);
 }
 
 formatTableData();
 
-function toggleTableRows(event) {    
+function toggleTableRows(event) {
     formatTableData(event.matches);
 }

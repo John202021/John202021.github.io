@@ -312,7 +312,7 @@ const commands_list = [
     name: "emojify",
     description: "Make any sentence out of emoji's",
     category: "MISC",
-    usage: "emojify [hex-code]",
+    usage: "emojify [message]",
   },
   {
     name: "button",

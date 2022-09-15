@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     color: white;
     background-color: #0E1015;
@@ -64,7 +66,7 @@ body {
     transition: color ease-out 350ms;
 }
 
-.navbar-links li:hover > * {
+.navbar-links li:hover>* {
     color: rgba(255, 0, 0, 0.9);
 }
 
@@ -109,10 +111,10 @@ main {
     background-color: #181a20;
     padding: 15px;
     box-shadow: 3px 5px 15px rgba(160, 27, 69, 0.9),
-                3px -5px 15px rgba(160, 27, 69, 0.7);
+        3px -5px 15px rgba(160, 27, 69, 0.7);
 }
 
-.categories-list ul > * {
+.categories-list ul>* {
     background-color: #181a20;
     list-style: none;
     padding: 10px;
@@ -120,9 +122,8 @@ main {
     font-weight: bolder;
 }
 
-.category:focus,
-.category:active{ 
-  background: rgb(160, 27, 69); 
+#all-choice {
+    background: rgb(160, 27, 69);
 }
 
 .commands-container {
@@ -150,7 +151,7 @@ table {
     border: 3px solid var(--main-border-color);
     border-collapse: collapse;
     box-shadow: 4px 8px 32px rgba(0, 0, 255, 0.9),
-                4px -8px 32px rgba(0, 0, 255, 0.7);
+        4px -8px 32px rgba(0, 0, 255, 0.7);
 }
 
 
@@ -159,7 +160,8 @@ th {
     font-weight: 900;
 }
 
-th, td {
+th,
+td {
     border: 3px solid var(--main-border-color);
     padding: 20px;
     font-size: 1.5rem;
@@ -184,7 +186,7 @@ td:hover {
 @media only screen and (max-width: 1400px) {
     .empty-container {
         display: none;
-    }    
+    }
 
     .categories-list {
         width: 350px;
@@ -198,12 +200,14 @@ td:hover {
 
 @media only screen and (max-width: 1200px) {
     :root {
-        --commands-container-width: 70%;
+        --commands-container-width: 70vw;
     }
 
-    th, td {
+    th,
+    td {
         border: 2px solid rgb(140, 138, 138);
         padding: 15px;
+        width: calc(var(--commands-container-width) /  3);
     }
 
     .commands-container {
@@ -233,19 +237,20 @@ td:hover {
         --commands-container-width: 80%;
     }
 
-    th, td {
+    th,
+    td {
         font-size: 1.25rem;
         padding: 15px;
     }
 
-    .categories-list ul > * {
+    .categories-list ul>* {
         font-size: 1.10rem;
     }
 }
 
 @media only screen and (max-width: 900px) {
     :root {
-        --commands-container-width: 69%;
+        --commands-container-width: 69vw;
     }
 
     th {
@@ -254,6 +259,7 @@ td:hover {
 
     td {
         text-align: left;
+        width: var(--commands-container-width)
     }
 
     .name-col {
@@ -281,10 +287,10 @@ td:hover {
 
 @media only screen and (max-width: 715px) {
     :root {
-        --commands-container-width: 85%;
+        --commands-container-width: 80vw;
     }
 
-    .categories-list ul > * {
+    .categories-list ul>* {
         text-align: center;
         border-bottom: 1px solid rgba(140, 138, 138, 0.15)
     }
@@ -333,9 +339,10 @@ td:hover {
 
 @keyframes animate {
     from {
-      filter: hue-rotate(0deg);
+        filter: hue-rotate(0deg);
     }
+
     to {
-      filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg);
     }
-  }
+}

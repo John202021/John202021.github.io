@@ -63,7 +63,7 @@ const commands_list = [
   },
   {
     name: "spam",
-    description: "Spam tags to someone!",
+    description: "Spam tags to someone",
     category: "ADMIN",
     usage: "spam [user]",
   },
@@ -238,19 +238,19 @@ const commands_list = [
   },
   {
     name: "messages",
-    description: "It shows the amount of messages send today!",
+    description: "It shows the amount of messages send today",
     category: "INFORMATION",
     usage: "messages",
   },
   {
     name: "ping",
-    description: "A command which replies with pong!",
+    description: "A command which replies with pong",
     category: "INFORMATION",
     usage: "ping",
   },
   {
     name: "serverinfo",
-    description: "It shows the amount of messages send today!",
+    description: "It shows the amount of messages send today",
     category: "INFORMATION",
     usage: "serverinfo",
   },
@@ -316,13 +316,13 @@ const commands_list = [
   },
   {
     name: "button",
-    description: "A command that replies with a BUTTON!",
+    description: "A command that replies with a BUTTON",
     category: "NORMAL",
     usage: "button",
   },
   {
     name: "buttonroles",
-    description: "A command that replies with a BUTTON!",
+    description: "A command that replies with a BUTTON",
     category: "NORMAL",
     usage: "buttonroles",
   },

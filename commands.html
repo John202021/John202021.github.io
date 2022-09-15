@@ -1,63 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon.ico"
+      type="image/x-icon"
+      sizes="16x16"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" sizes="16x16" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      /*to prevent Firefox FOUC, this must be here*/
+      let FF_FOUC_FIX;
+    </script>
+    <script src="./src/script.js" defer></script>
+    <script type="module" src="./src/commands_page.js" defer></script>
+    <title>Greek Warriors Bot</title>
+  </head>
 
-  <link rel="stylesheet" href="style.css" />
-  <script src="./src/script.js" defer></script>
-  <script type="module" src="./src/commands_page.js" defer></script>
-  <title>Greek Warriors Bot</title>
-</head>
+  <body>
+    <nav class="navbar">
+      <img
+        src="https://cdn.discordapp.com/avatars/875303676728725555/c4da904a3cc81b96d4ebbf4692a1ef70.png?size=4096"
+        alt="logo"
+        class="logo"
+      />
 
-<body>
-  <nav class="navbar">
-    <img src="https://cdn.discordapp.com/avatars/875303676728725555/c4da904a3cc81b96d4ebbf4692a1ef70.png?size=4096"
-      alt="logo" class="logo" />
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
 
-    <a href="#" class="toggle-button">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </a>
+      <div class="navbar-links">
+        <ul>
+          <li class="nav-link"><a href="./index.html">Home</a></li>
+          <li class="nav-link">
+            <a id="current-page" href="./commands.html">Commands</a>
+          </li>
+          <li class="nav-link"><a href="#">Help</a></li>
+          <li class="nav-link">
+            <a href="https://discord.gg/QrjxXxvVfq" target="_blank"
+              >Join our discord</a
+            >
+          </li>
+          <li class="nav-link"><a href="#">More</a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <div class="navbar-links">
-      <ul>
-        <li class="nav-link"><a href="./index.html">Home</a></li>
-        <li class="nav-link">
-          <a id="current-page" href="./commands.html">Commands</a>
-        </li>
-        <li class="nav-link"><a href="#">Help</a></li>
-        <li class="nav-link">
-          <a href="https://discord.gg/QrjxXxvVfq" target="_blank">Join our discord</a>
-        </li>
-        <li class="nav-link"><a href="#">More</a></li>
-      </ul>
-    </div>
-  </nav>
+    <main class="black-background">
 
-  <main>
-    <div class="table-container">
+      <div class="commands-container">
 
-      <table id="commands">
-        <thead>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Usage</th>
-        </thead>
-        <tbody></tbody>
-        <tfoot></tfoot>
-      </table>
+        <div class="categories-list" id="categories">
+          <ul>
+          </ul>
+        </div>
 
-    </div>
-  </main>
+        <div class="table-container">
+          <table id="commands">
+            </thead>
+            <thead>
+              <th>Name</th>
+              <th id="description-col">Description</th>
+              <th>Usage</th>
+            </thead>
+            <tbody></tbody>
+            <tfoot></tfoot>
+          </table>
+        </div>
 
-</body>
+        <div class="empty-container"></div>
+      </div>
 
+
+
+    </main>
+  </body>
 </html>

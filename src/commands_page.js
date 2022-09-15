@@ -125,7 +125,8 @@ function handleCategoryClick(event) {
     return;
 }
 
-await wait(500);
-
-document.getElementsByClassName("loading")[0].style.display = "none";
-document.getElementsByClassName("commands-container")[0].style.display = "flex";
+document.body.onload = async (event) => {
+    await wait(400);
+    document.getElementsByClassName("loading")[0].style.display = "none";
+    document.getElementsByClassName("commands-container")[0].style.display = "flex";
+}

@@ -121,7 +121,7 @@ main {
     border-top-color: #4bc8eb;
     border-bottom-color: #f13a8f;
     border-radius: 50%; 
-    animation: rotate 1s linear infinite;
+    animation: rotate .8s linear infinite;
 }
 
 .commands-container {
@@ -403,7 +403,7 @@ td:hover {
         transform: scale(1) rotate(0);
     }
     50%{
-        transform: scale(.9) rotate(180deg);
+        transform: scale(.8) rotate(180deg);
     }
     100% {
         transform: scale(1) rotate(360deg);

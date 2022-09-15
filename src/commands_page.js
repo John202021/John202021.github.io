@@ -1,6 +1,6 @@
 import { commands_list } from "./commands_list.js";
 
-const mediaQuery = window.matchMedia("(max-width: 715px)");
+const mediaQuery = window.matchMedia("(max-width: 900px)");
 const commands_dom = document.getElementById("commands").tBodies[0];
 const categories_dom = document.getElementById("categories").querySelector("ul");
 const formatted_commands_names = commands_list.map(c => c.name);

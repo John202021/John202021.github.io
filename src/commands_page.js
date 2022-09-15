@@ -33,7 +33,7 @@ commands_list.forEach(command => {
     table_row1_obj[command.category].push(td);
 
     let td2 = document.createElement("td");
-    td2.innerHTML = command.description;
+    td2.innerHTML = command.description + ".";
     td2.setAttribute("class", "descr-col");
     table_row2_obj[command.category].push(td2);
 

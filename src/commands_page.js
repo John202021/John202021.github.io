@@ -4,6 +4,7 @@ const mediaQuery = window.matchMedia("(max-width: 900px)");
 let commands_dom = document.getElementById("commands").querySelector("tbody");
 const categories_dom = document.getElementById("categories").querySelector("ul");
 let lastLiElem = document.getElementById("all-choice");
+const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
 let current_category;
 let categories_list = [];
@@ -12,16 +13,16 @@ commands_list.forEach(c => {
     return;
 })
 
-let table_row1_obj = {};
-let table_row2_obj = {};
-let table_row3_obj = {};
+let table_column1_obj = {};
+let table_column2_obj = {};
+let table_column3_obj = {};
 
 let commands_categories_obj = {};
 categories_list.forEach(category => {
     commands_categories_obj[category] = [];
-    table_row1_obj[category] = [];
-    table_row2_obj[category] = [];
-    table_row3_obj[category] = [];
+    table_column1_obj[category] = [];
+    table_column2_obj[category] = [];
+    table_column3_obj[category] = [];
 });
 
 commands_list.forEach(command => {
@@ -30,17 +31,17 @@ commands_list.forEach(command => {
     let td = document.createElement("td");
     td.innerHTML = command.name;
     td.setAttribute("class", "name-col");
-    table_row1_obj[command.category].push(td);
+    table_column1_obj[command.category].push(td);
 
     let td2 = document.createElement("td");
     td2.innerHTML = command.description + ".";
     td2.setAttribute("class", "descr-col");
-    table_row2_obj[command.category].push(td2);
+    table_column2_obj[command.category].push(td2);
 
     let td3 = document.createElement("td");
     td3.innerHTML = "=" + command.usage;
     td3.setAttribute("class", "usage-col");
-    table_row3_obj[command.category].push(td3);
+    table_column3_obj[command.category].push(td3);
 })
 
 Object.keys(commands_categories_obj).forEach(category => {
@@ -86,9 +87,9 @@ function toggleTableRows(event) {
 function outputCommandTable(category, bool) {
 
     for (let index = 0; index < commands_categories_obj[category].length; index++) {
-        const name_data = table_row1_obj[category][index];
-        const descr_data = table_row2_obj[category][index];
-        const usage_data = table_row3_obj[category][index];
+        const name_data = table_column1_obj[category][index];
+        const descr_data = table_column2_obj[category][index];
+        const usage_data = table_column3_obj[category][index];
 
         let tableRow = document.createElement("tr");
         if (mediaQuery.matches || bool) {
@@ -123,3 +124,8 @@ function handleCategoryClick(event) {
     }
     return;
 }
+
+await wait(500);
+
+document.getElementsByClassName("loading")[0].style.display = "none";
+document.getElementsByClassName("commands-container")[0].style.display = "flex";

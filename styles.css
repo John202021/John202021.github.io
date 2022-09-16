@@ -66,7 +66,7 @@ body {
     transition: color ease-out 350ms;
 }
 
-.navbar-links li:hover > * {
+.navbar-links li:hover>* {
     color: rgba(255, 0, 0, 0.9);
 }
 
@@ -113,15 +113,56 @@ main {
     width: 80px;
     height: 80px;
 }
+
 .loader {
     box-sizing: border-box;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     border: 5px solid #162534;
     border-top-color: #4bc8eb;
     border-bottom-color: #f13a8f;
-    border-radius: 50%; 
+    border-radius: 50%;
     animation: rotate .8s linear infinite;
+}
+
+.loading2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loader2 {
+    height: 150px;
+    width: 150px;
+    position: relative;
+}
+
+.loader2::before {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: animate-load 2s linear infinite;
+}
+
+.loader2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0;
+    width: 0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: animate-load 2s linear infinite;
+    animation-delay: 1s;
 }
 
 .commands-container {
@@ -251,7 +292,7 @@ td:hover {
     td {
         border: 2px solid rgb(140, 138, 138);
         padding: 15px;
-        width: calc(var(--commands-container-width) /  3);
+        width: calc(var(--commands-container-width) / 3);
     }
 
     .commands-container {
@@ -286,7 +327,7 @@ td:hover {
         padding: 15px;
     }
 
-    .categories-list ul > * {
+    .categories-list ul>* {
         font-size: 1.10rem;
     }
 
@@ -399,13 +440,34 @@ td:hover {
 }
 
 @keyframes rotate {
-    0%{
+    0% {
         transform: scale(1) rotate(0);
     }
-    50%{
+
+    50% {
         transform: scale(.8) rotate(180deg);
     }
+
     100% {
         transform: scale(1) rotate(360deg);
+    }
+}
+
+@keyframes animate-load {
+    0% {
+        width: 0;
+        height: 0;
+        border: solid 4px #e27100
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        border: solid 4px #e27100;
+        opacity: 0;
     }
 }

@@ -5,18 +5,18 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" sizes="16x16" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
 
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" sizes="16x16" />
   <link rel="stylesheet" href="styles.css" />
   <script>
     /*to prevent Firefox FOUC, this must be here*/
     let FF_FOUC_FIX;
   </script>
   <script src="./src/script.js" defer></script>
-  <title>Greek Warriors Bot</title>
+  <title>Greek Warriors Loader</title>
 </head>
 
 <body>
@@ -32,10 +32,10 @@
 
     <div class="navbar-links">
       <ul>
+        <li class="nav-link"><a href="./index.html">Home</a></li>
         <li class="nav-link">
-          <a id="current-page" href="./index.html">Home</a>
+          <a id="current-page" href="./commands.html">Commands</a>
         </li>
-        <li class="nav-link"><a href="./commands.html">Commands</a></li>
         <li class="nav-link"><a href="#">Help</a></li>
         <li class="nav-link">
           <a href="https://discord.gg/QrjxXxvVfq" target="_blank">Join our discord</a>
@@ -45,7 +45,18 @@
     </div>
   </nav>
 
-  <main>... ... ... ... ... ...</main>
+  <main class="black-background">
+
+    <section class="loading">
+      <div class="loader-wrapper">
+
+        <div class="loader">
+        </div>
+      </div>
+      </div>
+    </section>
+
+  </main>
 </body>
 
 </html>

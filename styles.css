@@ -193,6 +193,7 @@ main {
 .categories-list {
     margin-top: 4%;
     margin-left: 2%;
+    margin-bottom: 7%;
     width: 400px;
 }
 
@@ -305,7 +306,7 @@ td:hover {
     }
 
     .categories-list {
-        margin: 0;
+        margin-bottom: 0;
         width: var(--commands-container-width);
     }
 }

@@ -1,0 +1,127 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    color: white;
+    background-color: #0E1015;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+}
+
+*:focus {
+    outline: none;
+}
+
+.projects-list {
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-list a {
+    transition: color ease-out 250ms;
+    font-size: 1.5rem;
+    color: blue;
+}
+
+.projects-list a:hover {
+    color: rgba(0, 0, 255, 0.85);
+}
+
+.converter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 20px;
+}
+
+.converter {
+    width: max(350px, 45%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px white,
+        -5px -5px 15px white;
+}
+
+
+.input-container-selection {
+    text-align: left;
+    width: 100%;
+}
+
+.input-container-selection label,
+.user-input,
+.convert-output textarea {
+    margin-left: 20px;
+}
+
+
+
+.user-input input {
+    border: 2px solid rgb(157, 157, 159);
+    border-radius: 5px;
+    width: 90%;
+    height: 2.5rem;
+    font-size: 1rem;
+    padding-left: 2%;
+    margin-top: 3px;
+}
+
+.user-input input:focus {
+    animation: blinking-border 1.5s infinite;
+}
+
+.input-process > * {
+    border: 2px solid grey;
+    background-color: green;
+    width: 5rem;
+    height: 2rem;
+}
+
+.convert-output {
+    margin-top: 3px;
+    width: 100%;
+}
+
+.convert-output textarea {
+    border: 3px solid rgb(157, 157, 159);
+    width: 90%;
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+
+.convert-output textarea:hover {
+    border-color: blue;
+}
+
+select {
+    border: 2px solid rgb(157, 157, 159);
+    overflow: visible;
+}
+
+select > * {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+@keyframes blinking-border {
+    from, to {    
+        border-color: rgb(157, 157, 159);   
+    }    
+    50% {    
+        border-color: blue;
+    }
+}
+
+
+

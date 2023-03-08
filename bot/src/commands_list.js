@@ -305,27 +305,15 @@ const commands_list = [
   {
     name: "color",
     description: "Learn the info about a color",
-    category: "MISC",
+    category: "INFORMATION",
     usage: "color [hex-code]",
   },
   {
     name: "emojify",
     description: "Make any sentence out of emoji's",
-    category: "MISC",
+    category: "INFORMATION",
     usage: "emojify [message]",
-  },
-  {
-    name: "button",
-    description: "A command that replies with a BUTTON",
-    category: "NORMAL",
-    usage: "button",
-  },
-  {
-    name: "buttonroles",
-    description: "A command that replies with a BUTTON",
-    category: "NORMAL",
-    usage: "buttonroles",
-  },
+  }
 ];
 
 export { commands_list };
